@@ -1,14 +1,10 @@
 var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true
-    // video: {
-    //   facingMode: 'environment'
-     })
-     const constraints = {
-      facingMode: { exact: "environment" }
-    }
-    
+  navigator.mediaDevices.getUserMedia({ video: true,
+    video: {
+      facingMode: 'environment'
+  }})
     .then(function (stream) {
       video.srcObject = stream;
 
