@@ -1,10 +1,14 @@
 var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true,
-    video: {
-      facingMode: 'Environment'
-    } })
+  navigator.mediaDevices.getUserMedia({ video: true
+    // video: {
+    //   facingMode: 'environment'
+     })
+     const constraints = {
+      facingMode: { exact: "environment" }
+    }
+    
     .then(function (stream) {
       video.srcObject = stream;
 
@@ -39,4 +43,5 @@ function setRandomScaleAndPosition() {
 
 // run setRandomScaleAndPosition every 6 seconds
 setInterval(setRandomScaleAndPosition, 600);
+
 
