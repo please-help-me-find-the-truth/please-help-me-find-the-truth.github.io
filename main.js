@@ -25,7 +25,7 @@ function setRandomScaleAndPosition() {
     // calculate values
     var x = Math.floor(Math.random() * 100 - 50) // min = 0*100-50 => -50 ; max = 1*100-50 => 50
     var y = Math.floor(Math.random() * 100 - 50)
-    var scale = 2 // Math.floor(Math.random() * 6 + 2)    //siehe css var scale 
+    var scale = 3 // Math.floor(Math.random() * 6 + 2)    //siehe css var scale 
     
     // display values in console
     console.log("new values:", x, y, scale)
