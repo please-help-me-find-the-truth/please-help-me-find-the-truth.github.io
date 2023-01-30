@@ -5,6 +5,8 @@ if (navigator.mediaDevices.getUserMedia) {
     video: {
       facingMode: 'environment'
   }})
+    
+
     .then(function (stream) {
       video.srcObject = stream;
 
@@ -25,7 +27,8 @@ function setRandomScaleAndPosition() {
     var x = Math.floor(Math.random() * 100 - 50) // min = 0*100-50 => -50 ; max = 1*100-50 => 50
     var y = Math.floor(Math.random() * 100 - 50)
     var z = Math.floor(Math.random() * 100 - 50)
-    var scale = Math.floor(Math.random() * 6 + 2)    //siehe css var scale 
+    var scale = Math.floor(Math.random() * 20)+1;    //siehe css var scale 
+    // var scale = Math.floor(Math.random() * 6 + 4)  
     // var scale = 2 
     // display values in console
     console.log("new values:", x, y, z, scale)
@@ -39,5 +42,6 @@ function setRandomScaleAndPosition() {
 
 // run setRandomScaleAndPosition every 6 seconds
 setInterval(setRandomScaleAndPosition, 600);
+
 
 
